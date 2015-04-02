@@ -236,10 +236,10 @@ var DatePicker = React.createClass({
 
         return (
             <div className="dp-footer">
-                <div className="dp-footer-today" onClick={this.gotoNow}>
+                <div className="dp-footer-today" onTouchTap={this.gotoNow}>
                     {todayText}
                 </div>
-                <div className="dp-footer-selected" onClick={this.gotoSelected.bind(this, props)}>
+                <div className="dp-footer-selected" onTouchTap={this.gotoSelected.bind(this, props)}>
                     {gotoSelectedText}
                 </div>
             </div>

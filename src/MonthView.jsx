@@ -179,7 +179,7 @@ var MonthView = React.createClass({
             date     : date,
             className: classes.join(' '),
             style    : {},
-            onClick  : this.handleClick.bind(this, props, date, dateTimestamp),
+            onTouchTap  : this.handleClick.bind(this, props, date, dateTimestamp),
             children : dayText
         }
 

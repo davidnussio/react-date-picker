@@ -292,10 +292,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        return (
 	            React.createElement("div", {className: "dp-footer"}, 
-	                React.createElement("div", {className: "dp-footer-today", onClick: this.gotoNow}, 
+	                React.createElement("div", {className: "dp-footer-today", onTouchTap: this.gotoNow}, 
 	                    todayText
 	                ), 
-	                React.createElement("div", {className: "dp-footer-selected", onClick: this.gotoSelected.bind(this, props)}, 
+	                React.createElement("div", {className: "dp-footer-selected", onTouchTap: this.gotoSelected.bind(this, props)}, 
 	                    gotoSelectedText
 	                )
 	            )
@@ -711,7 +711,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            date     : date,
 	            className: classes.join(' '),
 	            style    : {},
-	            onClick  : this.handleClick.bind(this, props, date, dateTimestamp),
+	            onTouchTap  : this.handleClick.bind(this, props, date, dateTimestamp),
 	            children : dayText
 	        }
 
@@ -889,7 +889,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 
 	        return (
-	            React.createElement("td", {key: monthText, className: classes.join(' '), onClick: this.handleClick.bind(this, props, date)}, 
+	            React.createElement("td", {key: monthText, className: classes.join(' '), onTouchTap: this.handleClick.bind(this, props, date)}, 
 	                monthText
 	            )
 	        )
@@ -1026,7 +1026,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 
 	        return (
-	            React.createElement("td", {key: yearText, className: classes.join(' '), onClick: this.handleClick.bind(this, props, date)}, 
+	            React.createElement("td", {key: yearText, className: classes.join(' '), onTouchTap: this.handleClick.bind(this, props, date)}, 
 	                yearText
 	            )
 	        )
@@ -1081,19 +1081,19 @@ return /******/ (function(modules) { // webpackBootstrap
 		                React.createElement("tr", {className: "dp-row"}, 
 		                    React.createElement("td", {
 		                    	className: "dp-prev-nav dp-nav-cell dp-cell", 
-		                    	onClick: props.onPrev
+		                    	onTouchTap: props.onPrev
 		                    }, props.prevText
 		                    ), 
 
 		                    React.createElement("td", {
 		                    	className: "dp-nav-view dp-cell", 
 		                    	colSpan: props.colspan, 
-		                    	onClick: props.onChange
+		                    	onTouchTap: props.onChange
 		                    }, props.children), 
 
 		                    React.createElement("td", {
 		                    	className: "dp-next-nav dp-nav-cell dp-cell", 
-		                    	onClick: props.onNext
+		                    	onTouchTap: props.onNext
 		                    }, props.nextText)
 		                )
 	            	)
